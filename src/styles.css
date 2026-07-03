@@ -92,7 +92,7 @@ footer{max-width:1180px;margin:auto;padding:50px 28px;display:grid;grid-template
 @media (pointer:fine){body,a,button{cursor:none}}
 
 .cursor-dot-v3,.cursor-ring-v3{position:fixed;top:0;left:0;pointer-events:none;z-index:10000;border-radius:50%;will-change:transform}
-.cursor-dot-v3{width:7px;height:7px;margin:-3.5px;background:#c917bd;box-shadow:0 0 14px #a47d94}
+.cursor-dot-v3{width:7px;height:7px;margin:-3.5px;background:#c917bd;box-shadow:0 0 14px #ae6c94}
 .cursor-ring-v3{width:42px;height:42px;margin:-21px;border:1px solid rgba(179, 136, 164, 0.7);box-shadow:0 0 24px rgba(255,106,24,.08);transition:width .25s,height .25s,background .25s}
 
 .hero-v3{min-height:100vh;display:block;position:relative;padding:0;overflow:hidden;background:#050505;text-align:left}
