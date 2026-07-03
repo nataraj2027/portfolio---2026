@@ -197,7 +197,8 @@ function App(){
       >
         <div className="photo-aura"/>
         <img
-            src="/my-photo.png"
+         src={`${import.meta.env.BASE_URL}my-photo.png`}
+  
              alt="Nataraj M"
         />
       </motion.div>
