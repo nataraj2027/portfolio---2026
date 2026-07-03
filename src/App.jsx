@@ -15,22 +15,31 @@ const skills = [
 
 const projects = [
   {
-    n:"01", title:"Instagram Clone", period:"Mar 2025 — Aug 2025",
-    tech:"HTML · CSS · JavaScript · React", image:"/projects/instagram-clone.svg",
-    github:"https://github.com/",
-    text:"A responsive social frontend with navigation, posts feed, stories, suggestions, profile views, CRUD operations and dynamic UI components."
+    n: "01",
+    title: "Instagram Clone",
+    period: "Mar 2025 – Aug 2025",
+    tech: "HTML · CSS · JavaScript · React",
+    image: `${import.meta.env.BASE_URL}projects/instagram-clone.svg`,
+    github: "https://github.com/",
+    text: "A responsive social frontend with navigation, posts feed, stories, suggestions, profile views, CRUD operations and dynamic UI components."
   },
   {
-    n:"02", title:"College Website", period:"Dec 2024 — Feb 2025",
-    tech:"HTML · CSS · JavaScript · Java", image:"/projects/college-website.svg",
-    github:"https://github.com/",
-    text:"A web portal supporting frontend implementation and backend integration for academic and administrative workflows."
+    n: "02",
+    title: "College Website",
+    period: "Dec 2024 – Feb 2025",
+    tech: "HTML · CSS · JavaScript · Java",
+    image: `${import.meta.env.BASE_URL}projects/college-website.svg`,
+    github: "https://github.com/",
+    text: "A web portal supporting frontend implementation and backend integration for academic and administrative workflows."
   },
   {
-    n:"03", title:"Wastewater Energy Vehicle", period:"Nov 2023 — Jan 2024",
-    tech:"Python · Java", image:"/projects/wastewater-energy.svg",
-    github:"https://github.com/",
-    text:"A sustainable-energy prototype using wastewater, developed through system planning, feasibility analysis and performance testing."
+    n: "03",
+    title: "Wastewater Energy Vehicle",
+    period: "Nov 2023 – Jan 2024",
+    tech: "Python · Java",
+    image: `${import.meta.env.BASE_URL}projects/wastewater-energy.svg`,
+    github: "https://github.com/",
+    text: "A sustainable-energy prototype using wastewater, developed through system planning, feasibility analysis and performance testing."
   }
 ];
 
