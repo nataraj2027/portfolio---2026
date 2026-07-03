@@ -69,6 +69,11 @@ function GlowCard({children, className=""}) {
   };
   return <div ref={ref} onMouseMove={move} className={`glow-card ${className}`}>{children}</div>
 }
+const EMAIL = "natarajm9876@gmail.com";
+
+const gmailUrl =
+  `https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}` +
+  `&su=${encodeURIComponent("Portfolio Enquiry")}`;
 
 function App(){
   const [open,setOpen]=useState(false);
@@ -77,6 +82,8 @@ function App(){
   const cursorRing = useRef(null);
   const {scrollYProgress}=useScroll();
   const scaleX=useTransform(scrollYProgress,[0,1],[0,1]);
+  const gmailUrl =
+  "https://mail.google.com/mail/?view=cm&fs=1&to=natarajm9876@gmail.com&su=Portfolio%20Enquiry";
 
   useEffect(()=>{
     document.documentElement.dataset.theme = theme;
@@ -166,11 +173,24 @@ function App(){
         {["about","skills","experience","projects","awards"].map(x=>
           <a key={x} href={`#${x}`} onClick={()=>setOpen(false)}>{x}</a>
         )}
-        <a className="resume-nav" href="/Nataraj_M_Resume.pdf" download><Download size={14}/> Resume</a>
+        <a
+       className="resume-nav"
+        href={`${import.meta.env.BASE_URL}Nataraj_M_Resume.pdf`}
+        download="Nataraj_M_Resume.pdf"
+          >
+        <Download size={14} /> Resume
+         </a>
         <button className="theme-toggle" onClick={()=>setTheme(theme==="dark"?"light":"dark")} aria-label="Toggle day and night mode">
           {theme==="dark"?<Sun size={17}/>:<Moon size={17}/>}
         </button>
-        <a className="nav-cta" href="mailto:natarajm9876@gmail.com">Let's talk <ArrowUpRight size={15}/></a>
+        <a
+  className="nav-cta"
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=natarajm9876@gmail.com&su=Portfolio%20Enquiry"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Let's talk <ArrowUpRight size={15} />
+</a>
       </div>
       <button className="menu" onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button>
     </nav>
@@ -217,7 +237,7 @@ function App(){
 
       <motion.a
         className="hero-resume magnetic-item"
-        href="/Nataraj_M_Resume.pdf"
+        href={`${import.meta.env.BASE_URL}Nataraj_M_Resume.pdf`}
         download
         initial={{opacity:0,y:12}}
         animate={{opacity:1,y:0}}
@@ -242,8 +262,22 @@ function App(){
         transition={{delay:.75}}
       >
         <a className="magnetic-item" href="https://linkedin.com/in/nataraj-m-nr/" target="_blank" aria-label="LinkedIn"><Linkedin/></a>
-        <a className="magnetic-item" href="https://github.com/" target="_blank" aria-label="GitHub"><Github/></a>
-        <a className="magnetic-item" href="mailto:natarajm9876@gmail.com" aria-label="Email"><Mail/></a>
+        <a
+  href="https://github.com/nataraj2027"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Nataraj GitHub profile"
+>
+  <Github size={24} />
+</a>
+        <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=natarajm9876@gmail.com&su=Portfolio%20Enquiry"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Email Nataraj"
+>
+  <Mail size={24} />
+</a>
       </motion.div>
 
       <div className="hero-scroll-note">SCROLL TO EXPLORE <ChevronDown size={14}/></div>
